@@ -18,4 +18,4 @@ try {
     await fs.mkdir(dir,{recursive:true}); await fs.writeFile(`${dir}/index.html`,html);
   }
   console.log(`Prerendered ${routes.length} public pages.`);
-} finally { await server.close(); }
+} catch (error) { console.error(error); process.exitCode = 1; } finally { server.close(); process.exit(process.exitCode ?? 0); }
