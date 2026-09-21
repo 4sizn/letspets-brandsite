@@ -58,3 +58,21 @@ The second combined desktop/mobile comparison and focused typography comparison 
 ## Handoff boundary
 
 Complete runnable local brand site; not published and no existing domain altered. Development preview remains running. Build output is ready for a later deployment request.
+
+## September 21 — project migration QA
+
+final result: passed
+
+Scope: existing approved brand extended with six real projects, detail routes, studio, notes, updates and privacy. This is a content migration within the selected visual direction, not a new pixel-for-pixel clone.
+
+Evidence: `qa/migration-hero-comparison.jpg` combines the approved prior 1440×900 hero and the current hero at the same viewport. Navigation and CTA content change intentionally to expose Work. The image, typography, palette and composition remain consistent. `qa/migration-desktop-work.png`, `qa/migration-mobile-work.png`, `qa/migration-mobile-detail.png` cover the added surfaces at 1440×900 and 390×844.
+
+- Typography: existing Instrument Serif and Hubot retained; Korean descriptions wrap without clipping.
+- Layout rhythm: initial Work section inherited zero horizontal padding (P2). Added 40px desktop / 24px mobile gutters and recaptured. Two columns desktop, one mobile. No horizontal overflow at 390px or 1440px.
+- Colors: pastel lilac, peach, sky, mint, yellow and rose cards extend the approved palette; cream page and pill navigation preserved.
+- Imagery: six existing repository app captures load successfully. Cards contain the source image without stretching. These captures include original presentation framing; no fresh native screenshots are claimed because native computer-use access was denied.
+- Content: all six original slugs, factual detail content, privacy text and public app-ads record retained. No invented store buttons for unpublished products. Studio tools/how-we-work anchors retained.
+- Interaction: All/Mobile/Desktop counts 6/5/1; card → detail → Work round trip passed. Making-note disclosure opens. Production `/studio#tools` and `/privacy` render. Production browser console has no errors.
+- Build: nine prerendered pages. Existing four packaging tests and one migration integrity test pass.
+
+Remaining: fresh native app capture requires computer-use access; physical iPhone Safari not exercised. Production domain cutover is not part of this local preview completion.

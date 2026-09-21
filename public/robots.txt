@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.letspets.co.kr/sitemap.xml

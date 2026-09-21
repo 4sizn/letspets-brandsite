@@ -24,3 +24,11 @@ Self-hosted Google Fonts: Hubot Sans (400–700) and Instrument Serif (regular/i
 - Favicon: original simple typographic l. monogram.
 
 No Hidee logos, people, mask illustrations, app screenshots, or video were reused in the brand site. No unfinished letspets service images are included.
+
+## September 21 project migration
+
+- `public/assets/projects/*`: existing project gallery captures from `4sizn/lotus-brandsite`, commit `07cebda` (the live site's current source). These are existing app captures/presentations, not newly captured screenshots. Their existing app UI and framing are preserved; the website adds colored editorial cards around them.
+- Project facts, notes, studio text, and privacy policy were migrated from the same commit. No new store availability is implied.
+- Related repositories inspected: `4sizn/phoneswing-golf`, `4sizn/gardeneel-desktop`, `4sizn/lonely-candle`, `4sizn/ios-screenshot-manager`; existing local `quadra_glass_camera` and `cloud-minesweeper`.
+- The installed Moa simulator app launched successfully. Native screenshot capture was blocked by missing Computer Use permissions. No fresh native capture is claimed. Godot 4.7.2 imported Swing Golf successfully; the native UI capture blocker prevented a new visual session.
+- `public/app-ads.txt` is the existing public record retrieved from `https://www.letspets.co.kr/app-ads.txt`; it is not a newly generated publisher ID.

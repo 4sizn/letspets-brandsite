@@ -12,3 +12,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - This site introduces letspets as an independent one-person creative studio. Keep it complete without products: do not add unfinished service images, product listings, downloads, or coming-soon placeholders unless the user asks.
 - Preserve the selected Hidee-inspired interaction and visual direction. Product content can be introduced later, once it is ready.
+
+- September 21 migration: the user now requests the existing letspets.co.kr project catalogue, detail pages, and links. Include all six projects and use repository-grounded app captures, styled to match the selected Hidee-inspired brand. Never invent app screens or release availability.

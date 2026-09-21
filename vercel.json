@@ -1,0 +1,18 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/client",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "letspets.co.kr"
+        }
+      ],
+      "destination": "https://www.letspets.co.kr/:path*",
+      "permanent": true
+    }
+  ],
+  "cleanUrls": true
+}
