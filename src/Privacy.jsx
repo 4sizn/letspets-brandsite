@@ -1,5 +1,5 @@
 // 개정 시 시행일만 갱신한다 (최초 작성일은 고정).
-const EFFECTIVE_DATE = "2026년 9월 21일";
+const EFFECTIVE_DATE = "2026년 9월 26일";
 const FIRST_WRITTEN_DATE = "2026년 7월 29일";
 
 export default function PrivacyPolicyPage() {
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
                   <li >
                     <h3 >지뢰찾기:구름</h3>
                     <p >
-                      모바일 앱 ｜ iOS ｜ App Store 배포
+                      모바일 앱 ｜ iOS · Android ｜ App Store · Google Play 배포
                     </p>
                   </li>
                   <li >
@@ -76,12 +76,12 @@ export default function PrivacyPolicyPage() {
                   2. 수집·처리하는 정보
                 </h2>
                 <p >
-                  Garden Eel Cove와 모아, 지뢰찾기:구름, 유리 카메라는 광고·분석 SDK를
-                  포함하지 않습니다. 모아와 지뢰찾기:구름, 유리 카메라는 네트워크 통신을
-                  하지 않으며, 사진과 영상, 분석 결과를 서버로 보내지 않습니다. 세 앱 모두
-                  계정을 만들지 않습니다. Lonely Candle과
-                  Swing Golf도 계정, 연락처, 위치, 사진·파일, 결제 정보를 직접
-                  수집하거나 요구하지 않습니다. 다만 두 앱에 표시되는 광고를 제공·측정·
+                  Garden Eel Cove와 모아, 유리 카메라는 광고·분석 SDK를 포함하지
+                  않습니다. 모아와 유리 카메라는 네트워크 통신을 하지 않습니다.
+                  모아와 지뢰찾기:구름, 유리 카메라는 사진과 영상, 분석 결과를 서버로
+                  보내지 않으며, 세 앱 모두 계정을 만들지 않습니다. Lonely Candle과
+                  Swing Golf, 지뢰찾기:구름도 계정, 연락처, 위치, 사진·파일, 결제 정보를
+                  직접 수집하거나 요구하지 않습니다. 다만 세 앱에 표시되는 광고를 제공·측정·
                   사기 방지하기 위해 Google Mobile Ads SDK(AdMob)가 아래 정보를
                   자동으로 처리할 수 있습니다.
                 </p>
@@ -195,7 +195,7 @@ export default function PrivacyPolicyPage() {
                   </div>
                   <div >
                     <h3 >
-                      카메라 (지뢰찾기:구름, iOS 카메라 권한)
+                      카메라 (지뢰찾기:구름, iOS·Android 카메라 권한)
                     </h3>
                     <ul >
                       <li>
@@ -204,7 +204,7 @@ export default function PrivacyPolicyPage() {
                       </li>
                       <li>
                         <strong >처리 방식</strong> :
-                        촬영한 사진의 구름 영역 판독은 앱에 포함된 모델로 아이폰
+                        촬영한 사진의 구름 영역 판독은 앱에 포함된 모델로 휴대폰
                         안에서 끝납니다. 사진 보관함을 읽지 않고, 촬영한 사진을
                         보관함에 저장하지도 않습니다.
                       </li>
@@ -352,7 +352,7 @@ export default function PrivacyPolicyPage() {
                   <li>
                     <strong >지뢰찾기:구름</strong> :
                     완성한 구름 조각의 모양과 난이도, 성공 기록, 걸어 둔 방향과
-                    거리를 아이폰 안의 앱 저장 영역에만 기록합니다. 진행 중이던
+                    거리를 휴대폰 안의 앱 저장 영역에만 기록합니다. 진행 중이던
                     판을 복구하기 위한 직전 상태도 같은 영역에 남습니다. 이용자를
                     식별할 수 있는 정보가 아니며, 앱을 삭제하면 함께 사라집니다.
                     운영체제 설정에 따라 이 파일이 기기 백업에 포함될 수 있습니다.
@@ -381,7 +381,7 @@ export default function PrivacyPolicyPage() {
                 <h2 >5. 제3자 제공 및 광고 동의</h2>
                 <p >
                   letspets는 이용자 정보를 직접 판매하거나 광고주에게 제공하지
-                  않습니다. Lonely Candle과 Swing Golf는 Google Mobile Ads SDK를 통해
+                  않습니다. Lonely Candle과 Swing Golf, 지뢰찾기:구름은 Google Mobile Ads SDK를 통해
                   광고를 제공하며, Google은 위 2항의 정보를 자체 개인정보처리방침에
                   따라 처리할 수 있습니다. Google의 처리 방식은{" "}
                   <a
@@ -393,7 +393,7 @@ export default function PrivacyPolicyPage() {
                   에서 확인할 수 있습니다.
                 </p>
                 <p >
-                  두 앱은 필요한 지역에서 Google User Messaging Platform(UMP)을 통해
+                  세 앱은 필요한 지역에서 Google User Messaging Platform(UMP)을 통해
                   광고 관련 동의를 요청하고, 동의 상태를 확인할 수 없거나 동의가
                   필요한데 완료되지 않은 경우 광고 요청을 시작하지 않습니다. 동의
                   선택과 관련한 안내·철회 경로는 Google이 제공하는 동의 화면에
@@ -411,6 +411,12 @@ export default function PrivacyPolicyPage() {
                     App Store로 배포합니다.
                     설치·구매 내역과 기기 정보는 Apple이 처리하며, 개발자는 Apple이
                     제공하는 집계된 통계만 볼 수 있습니다.
+                  </li>
+                  <li>
+                    <strong >Google Play</strong> :
+                    Android 앱을 Google Play로 배포합니다. 설치 내역과 기기 정보는
+                    Google이 처리하며, 개발자는 Google이 제공하는 집계된 통계만 볼 수
+                    있습니다.
                   </li>
                   <li>
                     <strong >Google Fonts</strong> : 본
@@ -450,7 +456,7 @@ export default function PrivacyPolicyPage() {
                 <ul >
                   <li>
                     letspets는 계정·연락처 등 이용자 데이터를 자체 서버에 저장하지
-                    않습니다. 다만 Lonely Candle과 Swing Golf의 광고 제공 과정에서
+                    않습니다. 다만 Lonely Candle과 Swing Golf, 지뢰찾기:구름의 광고 제공 과정에서
                     Google이 처리하는 정보의 보관·삭제는 Google의 개인정보처리방침을
                     따릅니다.
                   </li>
@@ -469,7 +475,7 @@ export default function PrivacyPolicyPage() {
                 <h2 >8. 안전한 데이터 처리</h2>
                 <p >
                   letspets는 계정·연락처 정보를 자체 서버에 저장하지 않습니다. Lonely
-                  Candle과 Swing Golf의 광고 요청은 TLS가 적용된 Google Mobile Ads SDK를
+                  Candle과 Swing Golf, 지뢰찾기:구름의 광고 요청은 TLS가 적용된 Google Mobile Ads SDK를
                   통해 처리되며, Google이 처리하는 광고 정보의 보안은 Google의 정책과
                   기술적 보호조치를 따릅니다.
                 </p>
@@ -485,7 +491,7 @@ export default function PrivacyPolicyPage() {
                 <h2 >9. 아동의 개인정보</h2>
                 <p >
                   letspets는 연령을 묻거나 저장하지 않습니다. 다만 Lonely Candle과
-                  Swing Golf의 광고 SDK는 위 2항에 적힌 정보를 처리할 수 있습니다. 보호자는
+                  Swing Golf, 지뢰찾기:구름의 광고 SDK는 위 2항에 적힌 정보를 처리할 수 있습니다. 보호자는
                   자녀의 앱 사용과 광고 관련 선택에 관한 문의를 아래 연락처로
                   보내실 수 있습니다.
                 </p>
