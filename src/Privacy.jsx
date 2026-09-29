@@ -1,5 +1,5 @@
 // 개정 시 시행일만 갱신한다 (최초 작성일은 고정).
-const EFFECTIVE_DATE = "2026년 9월 26일";
+const EFFECTIVE_DATE = "2026년 9월 29일";
 const FIRST_WRITTEN_DATE = "2026년 7월 29일";
 
 export default function PrivacyPolicyPage() {
@@ -165,7 +165,7 @@ export default function PrivacyPolicyPage() {
                   </div>
                   <div >
                     <h3 >
-                      사진 보관함 읽기 (모아, iOS 사진 접근 권한)
+                      사진 보관함 읽기와 삭제 (모아, iOS 사진 접근 권한)
                     </h3>
                     <ul >
                       <li>
@@ -181,9 +181,12 @@ export default function PrivacyPolicyPage() {
                       </li>
                       <li>
                         <strong >저장·전송</strong> :
-                        사진 원본을 복사하거나 변경하지 않고, 사진 앱의 앨범도
-                        건드리지 않습니다. 이미지와 인식한 글자를 기기 밖으로
-                        전송하지 않습니다.
+                        사진 원본을 복사하지 않고, 사진 앱의 앨범도 건드리지 않습니다.
+                        이미지와 인식한 글자를 기기 밖으로 전송하지 않습니다.
+                        원본은 이용자가 ‘원본도 삭제’를 고르고 iOS의 확인 창에서 허용한
+                        경우에만 삭제하며, 삭제한 원본은 사진 앱의 ‘최근 삭제된 항목’으로
+                        옮겨집니다. ‘모아에서만 지우기’는 앱 안의 목록에서만 빼고 원본은
+                        그대로 둡니다.
                       </li>
                       <li>
                         <strong >거부 시</strong> :
@@ -347,7 +350,7 @@ export default function PrivacyPolicyPage() {
                     인식한 글자, 자동으로 정한 분류와 태그, 이용자가 고친 제목·폴더·
                     즐겨찾기를 아이폰 안의 앱 저장 영역에만 기록합니다. 이 파일은
                     iCloud 백업에서 제외하며, 앱을 삭제하면 함께 사라집니다. 사진
-                    원본은 영향을 받지 않습니다.
+                    원본은 이용자가 직접 삭제를 고를 때만 지웁니다.
                   </li>
                   <li>
                     <strong >지뢰찾기:구름</strong> :
