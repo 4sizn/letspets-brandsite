@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Work, Journal, ProjectPage, projects } from './Projects.jsx';
 import StudioPage from './Studio.jsx';
 import PrivacyPolicyPage from './Privacy.jsx';
+import PrivacyPolicyEnPage from './PrivacyEn.jsx';
 
 const values = [
   { title: 'Stay curious.', tag: '01 — CURIOSITY', color: 'mint', ko: '당연한 것에 질문하기', copy: '매일 보는 화면에도 아직 발견하지 못한 재미가 있다고 믿습니다. 작은 ‘왜?’에서 다음 이야기가 시작됩니다.' },
@@ -63,7 +64,7 @@ export function App({ initialPath } = {}) {
   useEffect(() => () => clearTimeout(copyTimer.current), []);
 
   useEffect(() => {
-    document.title = project ? `${project.title} | letspets` : path === '/privacy' ? '개인정보처리방침 | letspets' : path === '/studio' ? '스튜디오 소개 | letspets' : 'letspets — Make room for play.';
+    document.title = project ? `${project.title} | letspets` : path === '/privacy' ? '개인정보처리방침 | letspets' : path === '/privacy/en' ? 'Privacy Policy | letspets' : path === '/studio' ? '스튜디오 소개 | letspets' : 'letspets — Make room for play.';
   }, [path, project]);
 
   useEffect(() => {
@@ -165,7 +166,7 @@ export function App({ initialPath } = {}) {
         <div className="hello-top"><div data-reveal><p className="eyebrow">05 / START A CONVERSATION</p><h2 className="display">Got a little<br/><em>what if?</em></h2><span className="sticker hello-sticker">Let's talk.</span></div><div className="hello-copy" data-reveal><p>재미있는 생각이 떠올랐나요?<br/>작은 아이디어도, 가벼운 인사도 좋아요.</p><p>다음 즐거움은<br/>우리의 대화에서 시작될지도 모르니까요.</p><a className="email-link" href="mailto:4sizn@naver.com">4sizn@naver.com <Arrow /></a><button className="copy-email" onClick={copyEmail}>{copied?'이메일 주소를 복사했어요':'이메일 주소 복사'}</button><span className="sr-only" role="status">{copied?'4sizn@naver.com을 복사했습니다.':''}</span></div></div>
         <div className="hello-bottom" aria-hidden="true"><span>LET'S MAKE</span><span>ROOM FOR PLAY.</span></div>
       </section>
-    </main> : project ? <ProjectPage project={project}/> : path === "/studio" ? <div className="studio-page"><StudioPage /></div> : path === "/privacy" ? <div className="legal-page"><PrivacyPolicyPage /></div> : <main className="not-found"><h1>이 페이지는 찾지 못했어요.</h1><a className="button" href="/">홈으로 돌아가기</a></main>}
+    </main> : project ? <ProjectPage project={project}/> : path === "/studio" ? <div className="studio-page"><StudioPage /></div> : path === "/privacy" ? <div className="legal-page"><PrivacyPolicyPage /></div> : path === "/privacy/en" ? <div className="legal-page"><PrivacyPolicyEnPage /></div> : <main className="not-found"><h1>이 페이지는 찾지 못했어요.</h1><a className="button" href="/">홈으로 돌아가기</a></main>}
     <footer>
       <div className="footer-top"><div className="footer-brand"><Wordmark /><p>재미를 만드는 1인 창작 스튜디오.<br/>작은 호기심, 새로운 즐거움.</p></div><div className="footer-links"><div><span>EXPLORE</span><a href="/#studio">Studio</a><a href="/#work">Work</a><a href="/#notes">Notes</a></div><div><span>CONNECT</span><a href="/privacy">개인정보처리방침</a><a href="mailto:4sizn@naver.com">Email <Arrow /></a><a href="https://github.com/4sizn" target="_blank" rel="noreferrer">GitHub <Arrow /></a><button className="motion-toggle" onClick={()=>setMotion(!motion)} aria-pressed={!motion}>{motion?'움직임 일시정지':'움직임 다시 재생'}</button></div></div></div>
       <a className="footer-home" href="/#home" aria-label="페이지 맨 위로"><Wordmark footer /></a>

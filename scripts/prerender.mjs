@@ -7,7 +7,7 @@ const server = await createServer({ server: { middlewareMode: true }, appType: '
 try {
   const { App } = await server.ssrLoadModule('/src/App.jsx');
   const template = await fs.readFile('dist/client/index.html', 'utf8');
-  const routes = [{path:'/',title:'letspets — Make room for play.'}, {path:'/studio',title:'스튜디오 소개 | letspets'}, {path:'/privacy',title:'개인정보처리방침 | letspets'}, ...data.projects.map(p=>({path:`/projects/${p.slug}`,title:`${p.title} | letspets`,description:p.tagline}))];
+  const routes = [{path:'/',title:'letspets — Make room for play.'}, {path:'/studio',title:'스튜디오 소개 | letspets'}, {path:'/privacy',title:'개인정보처리방침 | letspets'}, {path:'/privacy/en',title:'Privacy Policy | letspets'}, ...data.projects.map(p=>({path:`/projects/${p.slug}`,title:`${p.title} | letspets`,description:p.tagline}))];
   const escape = text => text.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
   for (const route of routes) {
     const body = renderToString(createElement(App, {initialPath:route.path}));

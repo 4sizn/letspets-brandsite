@@ -15,6 +15,9 @@ export default function PrivacyPolicyPage() {
             <p >
               시행일 : {EFFECTIVE_DATE} ｜ 최초 작성일 : {FIRST_WRITTEN_DATE}
             </p>
+            <p >
+              <a href="/privacy/en" lang="en">English</a>
+            </p>
 
             <div >
               <section>

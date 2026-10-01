@@ -36,4 +36,4 @@ The Vite/React project is self-contained and separate from Cloud Minesweeper. Th
 
 ## Existing-site migration
 
-The project now includes six project pages, `/studio`, `/privacy`, notes, updates, and the existing public app-ads record. `npm run build` prerenders nine public pages. Run `npm run test:migration` after building. See [MIGRATION.md](MIGRATION.md) for preserved routes, image provenance and production cutover status.
+The project now includes six project pages, `/studio`, `/privacy` (with an English translation at `/privacy/en`), notes, updates, and the existing public app-ads record. `npm run build` prerenders ten public pages. Run `npm run test:migration` after building. See [MIGRATION.md](MIGRATION.md) for preserved routes, image provenance and production cutover status.
