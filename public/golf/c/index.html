@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#fffcf3" />
+  <meta property="og:title" content="Swing Golf — 친구의 도전" />
+  <meta property="og:description" content="폰을 휘둘러 치는 골프. 친구의 샷을 이겨보세요." />
+  <meta property="og:image" content="https://www.letspets.co.kr/assets/projects/golf-aim.png" />
+  <title>Swing Golf 도전</title>
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="stylesheet" href="/assets/fonts.css" />
+  <style>
+    :root { --cream:#fffcf3; --ink:#171815; --dim:#5d5f57; --blue:#648bf6; --mint:#61dba5; --line:#e7e2d3; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100svh; display:grid; place-items:center; padding:24px 16px;
+      background:var(--cream); color:var(--ink);
+      font-family:'Hubot Sans','Apple SD Gothic Neo','Noto Sans KR',sans-serif; }
+    main { width:100%; max-width:420px; text-align:center; }
+    .eyebrow { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--dim); margin:0 0 10px; }
+    h1 { font-size:28px; line-height:1.25; margin:0 0 8px; word-break:keep-all; }
+    .score { margin:22px 0; padding:20px; border:1.5px solid var(--line); border-radius:20px; background:#fff; }
+    .score b { display:block; font-size:44px; line-height:1; margin:6px 0; }
+    .score span { color:var(--dim); font-size:15px; }
+    .btn { display:block; width:100%; padding:16px; border-radius:999px; font-size:17px; font-weight:700;
+      text-decoration:none; margin-top:12px; }
+    .primary { background:var(--ink); color:var(--cream); }
+    .secondary { background:transparent; color:var(--ink); border:1.5px solid var(--ink); }
+    .note { color:var(--dim); font-size:14px; line-height:1.55; margin-top:18px; word-break:keep-all; }
+    [hidden] { display:none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Swing Golf</p>
+    <h1 id="title">친구가 도전장을 보냈어요</h1>
+    <div class="score" id="score" hidden>
+      <span id="course"></span>
+      <b id="strokes"></b>
+      <span id="mode"></span>
+    </div>
+    <a class="btn primary" id="store" href="https://apps.apple.com/app/id6796625813">App Store에서 받기</a>
+    <a class="btn secondary" id="open" href="#">이미 앱이 있다면 — 앱에서 열기</a>
+    <p class="note" id="note">앱을 설치한 뒤 받은 링크를 한 번 더 누르면 친구의 고스트와 같은 코스에서 겨룰 수 있어요.</p>
+  </main>
+  <script>
+    // 앱이 설치돼 있으면 이 주소는 Universal Link 로 앱이 바로 연다 — 이 페이지는 앱이 없거나
+    // 인앱 브라우저(카카오톡 등)일 때만 보인다. 기록은 # 뒤에만 있어 서버로 가지 않는다.
+    var en = !/^ko/i.test(navigator.language || '');
+    var T = en ? {
+      title: 'A friend challenged you', strokes: ' strokes', fast: 'Fast mode', classic: 'Classic',
+      store: 'Get it on the App Store', open: 'Already have the app? Open it',
+      note: 'After installing, tap the link you received once more to play the same course against your friend’s ghost.',
+      android: 'Swing Golf is on iOS for now. The Android version is coming soon. Already have it? Use the button above.',
+      named: function (n) { return n + ' challenged you'; },
+      courses: { round3: 'Greenhill', sandbay: 'Sand Bay', stormridge: 'Storm Ridge', coralisle: 'Coral Isle', practice: 'Practice hole' }
+    } : {
+      title: '친구가 도전장을 보냈어요', strokes: '타', fast: '패스트 모드', classic: '클래식',
+      store: 'App Store에서 받기', open: '이미 앱이 있다면 — 앱에서 열기',
+      note: '앱을 설치한 뒤 받은 링크를 한 번 더 누르면 친구의 고스트와 같은 코스에서 겨룰 수 있어요.',
+      android: '지금은 iOS 버전만 스토어에 있어요. Android 버전은 준비 중이에요. 앱이 이미 있다면 위 버튼으로 열 수 있어요.',
+      named: function (n) { return n + ' 님이 도전장을 보냈어요'; },
+      courses: { round3: '그린힐', sandbay: '샌드 베이', stormridge: '스톰 릿지', coralisle: '코랄 아일', practice: '연습 홀' }
+    };
+    var $ = function (id) { return document.getElementById(id); };
+    var frag = location.hash.slice(1);
+    $('title').textContent = T.title;
+    $('store').textContent = T.store;
+    $('open').textContent = T.open;
+    $('note').textContent = T.note;
+    $('open').href = 'phoneswinggolf://challenge#' + frag;
+    if (!frag) $('open').hidden = true;
+    if (/android/i.test(navigator.userAgent)) {
+      // Google Play 출시 전 — 스토어 버튼은 숨기고, 앱이 깔린 테스터는 "앱에서 열기"로 들어온다.
+      $('store').hidden = true;
+      $('note').textContent = T.android;
+    }
+
+    // 앱(challenge.gd)과 같은 형식: base64url( 원본길이 4바이트 LE + gzip(JSON) )
+    async function decode(f) {
+      var b64 = f.replace(/-/g, '+').replace(/_/g, '/');
+      while (b64.length % 4) b64 += '=';
+      var bytes = Uint8Array.from(atob(b64), function (c) { return c.charCodeAt(0); });
+      var stream = new Blob([bytes.slice(4)]).stream().pipeThrough(new DecompressionStream('gzip'));
+      return JSON.parse(await new Response(stream).text());
+    }
+    if (frag && window.DecompressionStream) {
+      decode(frag).then(function (d) {
+        if (d.n) $('title').textContent = T.named(d.n);
+        $('course').textContent = T.courses[d.c] || '';
+        $('strokes').textContent = d.s + T.strokes;
+        $('mode').textContent = d.f ? T.fast : T.classic;
+        $('score').hidden = false;
+      }).catch(function () { /* 깨진 링크 — 기본 문구만 보여준다 */ });
+    }
+  </script>
+</body>
+</html>
