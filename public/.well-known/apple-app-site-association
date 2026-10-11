@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["VN497S6KK3.com.lotus.phoneswinggolf"],
+        "components": [{ "/": "/golf/c*", "comment": "Swing Golf friend challenge links" }]
+      }
+    ]
+  }
+}
