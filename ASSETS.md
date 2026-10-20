@@ -32,3 +32,8 @@ No Hidee logos, people, mask illustrations, app screenshots, or video were reuse
 - Related repositories inspected: `4sizn/phoneswing-golf`, `4sizn/gardeneel-desktop`, `4sizn/lonely-candle`, `4sizn/ios-screenshot-manager`; existing local `quadra_glass_camera` and `cloud-minesweeper`.
 - The installed Moa simulator app launched successfully. Native screenshot capture was blocked by missing Computer Use permissions. No fresh native capture is claimed. Godot 4.7.2 imported Swing Golf successfully; the native UI capture blocker prevented a new visual session.
 - `public/app-ads.txt` is the existing public record retrieved from `https://www.letspets.co.kr/app-ads.txt`; it is not a newly generated publisher ID.
+
+## October 20 addition: letspets:강아지장난감
+
+- `public/assets/projects/letspets-home.png`, `letspets-fever.png`, `letspets-dex.png`: raw iPad App Store captures (2732×2048, Korean UI) from the `4sizn/letspets-touch-game` repository's `appstore/screens-ipad/` (`1-01_start`, `2-11_fever`, `5-20_dex`), resized to 1200×900. No framing or edits; no invented screens.
+- The app is in App Store review (1.0 build 2, submitted 2026-10-20), so the project page carries no store link.
