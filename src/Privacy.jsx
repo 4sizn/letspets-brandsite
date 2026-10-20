@@ -1,5 +1,5 @@
 // 개정 시 시행일만 갱신한다 (최초 작성일은 고정).
-const EFFECTIVE_DATE = "2026년 9월 29일";
+const EFFECTIVE_DATE = "2026년 10월 20일";
 const FIRST_WRITTEN_DATE = "2026년 7월 29일";
 
 export default function PrivacyPolicyPage() {
@@ -66,6 +66,12 @@ export default function PrivacyPolicyPage() {
                     </p>
                   </li>
                   <li >
+                    <h3 >letspets:강아지장난감</h3>
+                    <p >
+                      모바일 게임 ｜ iOS (iPhone · iPad) ｜ App Store 배포
+                    </p>
+                  </li>
+                  <li >
                     <h3 >letspets 웹사이트</h3>
                     <p >
                       본 사이트 ｜ 정적 페이지
@@ -79,8 +85,10 @@ export default function PrivacyPolicyPage() {
                   2. 수집·처리하는 정보
                 </h2>
                 <p >
-                  Garden Eel Cove와 모아, 유리 카메라는 광고·분석 SDK를 포함하지
-                  않습니다. 모아와 유리 카메라는 네트워크 통신을 하지 않습니다.
+                  Garden Eel Cove와 모아, 유리 카메라, letspets:강아지장난감은 광고·분석
+                  SDK를 포함하지 않습니다. 모아와 유리 카메라, letspets:강아지장난감은
+                  네트워크 통신을 하지 않습니다. letspets:강아지장난감은 계정을 만들지
+                  않고, 사진을 포함해 어떤 정보도 수집하거나 기기 밖으로 보내지 않습니다.
                   모아와 지뢰찾기:구름, 유리 카메라는 사진과 영상, 분석 결과를 서버로
                   보내지 않으며, 세 앱 모두 계정을 만들지 않습니다. Lonely Candle과
                   Swing Golf, 지뢰찾기:구름도 계정, 연락처, 위치, 사진·파일, 결제 정보를
@@ -319,6 +327,32 @@ export default function PrivacyPolicyPage() {
                       </li>
                     </ul>
                   </div>
+                  <div >
+                    <h3 >
+                      카메라 (letspets:강아지장난감, iOS 카메라 권한, 선택)
+                    </h3>
+                    <ul >
+                      <li>
+                        <strong >사용 목적</strong> :
+                        설정에서 ‘잡는 순간 사진’을 켠 경우에만, 강아지가 생물을
+                        잡는 순간 전면 카메라로 강아지의 모습을 찍습니다.
+                      </li>
+                      <li>
+                        <strong >처리 방식</strong> :
+                        이 설정을 켜지 않으면 카메라를 쓰지 않습니다. 사진 보관함을
+                        읽거나 보관함에 저장하지 않습니다.
+                      </li>
+                      <li>
+                        <strong >저장·전송</strong> :
+                        찍은 사진은 기기 안의 앱 앨범에만 저장되며 기기 밖으로
+                        전송하지 않습니다. 앱을 삭제하면 함께 사라집니다.
+                      </li>
+                      <li>
+                        <strong >거부 시</strong> :
+                        사진 기능만 동작하지 않고, 놀이는 그대로 할 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <p >
                   Garden Eel Cove는 마이크, 카메라, 위치 등 민감한 권한을 사용하지
@@ -372,6 +406,13 @@ export default function PrivacyPolicyPage() {
                     설정과 임시 파일이 함께 사라집니다.
                   </li>
                   <li>
+                    <strong >letspets:강아지장난감</strong> :
+                    보호자가 고른 설정값, 만난 생물과 처음 만난 날을 담은 도감,
+                    놀이 기록, ‘잡는 순간 사진’으로 찍은 사진을 기기 안의 앱 저장
+                    영역에만 기록합니다. 이용자를 식별할 수 있는 정보가 아니며, 앱을
+                    삭제하면 함께 사라집니다.
+                  </li>
+                  <li>
                     <strong >Swing Golf</strong> : 홀별
                     최고 기록(타수·시간), 스윙·퍼터 감도 설정, 캘리브레이션으로
                     등록한 최대 스윙 값, 게임 모드 선택을 기기 안의 앱 저장
@@ -413,7 +454,8 @@ export default function PrivacyPolicyPage() {
                   </li>
                   <li>
                     <strong >Apple App Store</strong> :
-                    Swing Golf, 모아, 지뢰찾기:구름, 유리 카메라, iOS용 Lonely Candle을
+                    Swing Golf, 모아, 지뢰찾기:구름, 유리 카메라, letspets:강아지장난감,
+                    iOS용 Lonely Candle을
                     App Store로 배포합니다.
                     설치·구매 내역과 기기 정보는 Apple이 처리하며, 개발자는 Apple이
                     제공하는 집계된 통계만 볼 수 있습니다.

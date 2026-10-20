@@ -1,7 +1,7 @@
 // English translation of Privacy.jsx. Keep it in step with the Korean page;
 // the Korean version prevails. Update only the effective date on revision
 // (the first-written date is fixed).
-const EFFECTIVE_DATE = "September 29, 2026";
+const EFFECTIVE_DATE = "October 20, 2026";
 const FIRST_WRITTEN_DATE = "July 29, 2026";
 
 export default function PrivacyPolicyEnPage() {
@@ -72,6 +72,12 @@ export default function PrivacyPolicyEnPage() {
                     </p>
                   </li>
                   <li >
+                    <h3 >letspets: Games for Dogs</h3>
+                    <p >
+                      Mobile game ｜ iOS (iPhone · iPad) ｜ Distributed via the App Store
+                    </p>
+                  </li>
+                  <li >
                     <h3 >letspets website</h3>
                     <p >
                       This site ｜ Static pages
@@ -85,9 +91,12 @@ export default function PrivacyPolicyEnPage() {
                   2. Information collected and processed
                 </h2>
                 <p >
-                  Garden Eel Cove, Moa and Glass Camera do not include any
-                  advertising or analytics SDK. Moa and Glass Camera do not
-                  communicate over the network. Moa, Cloud Minesweeper and Glass
+                  Garden Eel Cove, Moa, Glass Camera and letspets: Games for
+                  Dogs do not include any advertising or analytics SDK. Moa,
+                  Glass Camera and letspets: Games for Dogs do not communicate
+                  over the network. letspets: Games for Dogs creates no account
+                  and does not collect any information, including photos, or
+                  send it off the device. Moa, Cloud Minesweeper and Glass
                   Camera do not send photos, videos or analysis results to a
                   server, and none of the three apps creates an account. Lonely
                   Candle, Swing Golf and Cloud Minesweeper also do not directly
@@ -355,6 +364,35 @@ export default function PrivacyPolicyEnPage() {
                       </li>
                     </ul>
                   </div>
+                  <div >
+                    <h3 >
+                      Camera (letspets: Games for Dogs, iOS camera permission, optional)
+                    </h3>
+                    <ul >
+                      <li>
+                        <strong >Purpose</strong>:
+                        Only when the "Photo at catch" setting is turned on,
+                        takes a front-camera photo of your dog at the moment it
+                        catches a creature.
+                      </li>
+                      <li>
+                        <strong >How it is processed</strong>:
+                        If the setting is off, the camera is not used. The app
+                        does not read the photo library or save to it.
+                      </li>
+                      <li>
+                        <strong >Storage and transmission</strong>:
+                        Photos are saved only in the in-app album on your device
+                        and are never sent off the device. They disappear when
+                        you delete the app.
+                      </li>
+                      <li>
+                        <strong >If you decline</strong>:
+                        Only the photo feature stops working; play continues as
+                        usual.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <p >
                   Garden Eel Cove does not use sensitive permissions such as the
@@ -419,6 +457,14 @@ export default function PrivacyPolicyEnPage() {
                     and temporary files disappear when you delete the app.
                   </li>
                   <li>
+                    <strong >letspets: Games for Dogs</strong>:
+                    Records the settings the guardian chose, the collection of
+                    creatures met and when each was first met, the play log, and
+                    photos taken with "Photo at catch", only in the app's
+                    storage area on the device. It is not information that can
+                    identify you, and it disappears when you delete the app.
+                  </li>
+                  <li>
                     <strong >Swing Golf</strong>: Records
                     best records per hole (strokes and time), swing and putter
                     sensitivity settings, the maximum swing value registered
@@ -465,8 +511,9 @@ export default function PrivacyPolicyEnPage() {
                   </li>
                   <li>
                     <strong >Apple App Store</strong>:
-                    Swing Golf, Moa, Cloud Minesweeper, Glass Camera and Lonely
-                    Candle for iOS are distributed through the App Store.
+                    Swing Golf, Moa, Cloud Minesweeper, Glass Camera, letspets:
+                    Games for Dogs and Lonely Candle for iOS are distributed
+                    through the App Store.
                     Installation and purchase history and device information are
                     processed by Apple, and the developer can see only the
                     aggregated statistics Apple provides.
